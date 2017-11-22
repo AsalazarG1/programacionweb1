@@ -1,0 +1,16 @@
+<!-- 		tipos de input 		 -->
+		<div class="row">
+			<div class="col s12 m8 l6 offset-m2 offset-l3 card-panel black-text grey">
+				<h3>{{$ctrl.titl}}</h3>
+				<p>Email: <input type="email" ng-model="email" placeholder="{{$ctrl.placeholder}}"></p>
+				<p>Edad: <input type="radio" name="age" id="rad1" value="1" ng-model="age"><label for="rad1">Menos de 18</label>
+						 <input type="radio" name="age" id="rad2" value="2" ng-model="age"><label for="rad2">18 a 35</label>
+						 <input type="radio" name="age" id="rad3" value="3" ng-model="age"><label for="rad3">36 a 65</label>
+						 <input type="radio" name="age" id="rad4" value="4" ng-model="age"><label for="rad4">Mas de 65</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkSubscribe" ng-model="subscribe"><label for="checkSubscribe">Suscribirse al Newsletter de la pagina</label>
+				</p>
+				<button class="btn blue" ng-click="btnClick()">Aceptar</button>
+			</div>
+		</div>

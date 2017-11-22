@@ -1,0 +1,37 @@
+<div class="card-panel green black-text">
+  
+ <center>
+ <h2>Procesar texto</h2>
+ </center>
+  <p> Mensaje: <input ng-keypress="$ctrl.kPress ($event)" type="text" ng-model="$ctrl.msg" placeholder="Agregue algun texto"></p>
+  	<h4>{{$ctrl.msg}}</h4>
+  	<h4 ng-bind="$ctrl.msg"></h4>
+  	
+<ul>
+  <li ng-repeat="mov in $ctrl.moviesArray">{{mov}}</li>
+</ul>
+      
+  <table ng-mouseenter="$ctrl.msenter()" ng-mouseleave="$ctrl.msexit()" ng-mousemove="$ctrl.msmove($event)" class="bordered highlight black-text darken-3">
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Clasificacion</th>
+      <th>Popularidad</th>
+      <th>Poster</th>
+    </tr>
+    <tr ng-repeat="x in $ctrl.moviesObject">
+      <td>{{x.num}}</td>
+      <td>{{x.name}}</td>
+      <td>{{x.rating}}</td>
+      <td>{{x.pop}}</td>
+      <td><a href="{{x.url}}" target="_blank"><img src="{{x.img}}" alt=""></a></td>
+    </tr>
+  </table>
+
+	<p>El mouse entro {{$ctrl.countEnter}} veces a la tabla y ha salio {{$ctrl.countExit}} veces.</p>
+	<p>X: {{$ctrl.moveX}}, Y: {{$ctrl.moveY}}</p>
+
+  </div>
+
+
+

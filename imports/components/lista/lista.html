@@ -1,0 +1,10 @@
+<div class="card-panel blue lighten-2 black-text">
+	<header>
+		<h2>{{$ctrl.titl}}</h2>
+	</header>
+	<input type="text" placeholder="agregar tarea" ng-model="$ctrl.txtTarea">
+  	<button class="btn waves-effect waves-light" type="submit" ng-click="$ctrl.addTarea()">Agregar</button>
+ 	<ul>
+		<li ng-repeat="str in $ctrl.lst">{{str.tarea}}</li>
+	</ul>
+</div>

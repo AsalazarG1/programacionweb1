@@ -1,0 +1,14 @@
+<div class="card-panel indigo white-text">
+<input type="text" placeholder="Nombre(s)" ng-model="$ctrl.nameExam">
+<input type="text" placeholder="Apellido Paterno" ng-model="$ctrl.appExam">
+<input type="text" placeholder="Apellido Materno" ng-model="$ctrl.apmExam">
+<button class="btn waves-effect waves-light" ng-click="$ctrl.clickAnadir()">ANADIR</button>
+
+<ol>
+	<li ng-repeat="str in $ctrl.nombre track by $index">{{str.name}}
+
+	 <button class="btn waves-effect waves-light" ng-click="$ctrl.editar($index)">EDITAR</button>
+
+	 <button class="btn waves-effect waves-light" ng-click="$ctrl.eliminar($index)">ELIMINAR</button></li>
+</ol>
+</div>

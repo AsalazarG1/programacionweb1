@@ -1,0 +1,11 @@
+<h1>Fernando Venzor</h1>
+<div >
+<p>Filas: <input type="number" ng-model="$ctrl.fila"></p>
+<p>Columnas: <input type="number" ng-model="$ctrl.col"></p>
+<button class="btn" ng-click="$ctrl.tabla()">Insertar</button>
+<table class="bordered">
+  <tr ng-repeat="cr in $ctrl.dts track by $index">
+    <td ng-repeat="cs in cr track by $index">{{cs}}</td>  
+  </tr>
+</table>
+</div>
